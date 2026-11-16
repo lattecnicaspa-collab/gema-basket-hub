@@ -14,7 +14,24 @@ import { Route as AuthenticatedRouteRouteImport } from './routes/_authenticated/
 import { Route as AuthRouteImport } from './routes/auth'
 import { Route as ResetPasswordRouteImport } from './routes/reset-password'
 import { Route as AuthenticatedDashboardRouteImport } from './routes/_authenticated/dashboard'
+import { Route as AuthenticatedImpostazioniRouteImport } from './routes/_authenticated/impostazioni'
+import { Route as AuthenticatedPortaleSponsorRouteImport } from './routes/_authenticated/portale-sponsor'
 import { Route as AuthenticatedScadenzarioRouteImport } from './routes/_authenticated/scadenzario'
+import { Route as AuthenticatedInfoDocumentiRouteImport } from './routes/_authenticated/info/documenti'
+import { Route as AuthenticatedInfoSafeguardingRouteImport } from './routes/_authenticated/info/safeguarding'
+import { Route as AuthenticatedMatchdayIndexRouteImport } from './routes/_authenticated/matchday/index'
+import { Route as AuthenticatedMatchdayAbbonamentiRouteImport } from './routes/_authenticated/matchday/abbonamenti'
+import { Route as AuthenticatedMatchdayAccessiRouteImport } from './routes/_authenticated/matchday/accessi'
+import { Route as AuthenticatedMatchdayAccreditiRouteImport } from './routes/_authenticated/matchday/accrediti'
+import { Route as AuthenticatedMatchdayCassaRouteImport } from './routes/_authenticated/matchday/cassa'
+import { Route as AuthenticatedMatchdayReportRouteImport } from './routes/_authenticated/matchday/report'
+import { Route as AuthenticatedModuloSlugRouteImport } from './routes/_authenticated/modulo/$slug'
+import { Route as AuthenticatedSponsorIndexRouteImport } from './routes/_authenticated/sponsor/index'
+import { Route as AuthenticatedSponsorContrattiRouteImport } from './routes/_authenticated/sponsor/contratti'
+import { Route as AuthenticatedSponsorControprestazioniRouteImport } from './routes/_authenticated/sponsor/controprestazioni'
+import { Route as AuthenticatedSponsorCrmRouteImport } from './routes/_authenticated/sponsor/crm'
+import { Route as AuthenticatedSponsorReportRouteImport } from './routes/_authenticated/sponsor/report'
+import { Route as AuthenticatedSponsorSpaziRouteImport } from './routes/_authenticated/sponsor/spazi'
 import { Route as ApiPublicIcalTokenRouteImport } from './routes/api/public/ical/$token'
 
 const IndexRoute = IndexRouteImport.update({
@@ -41,10 +58,110 @@ const AuthenticatedDashboardRoute = AuthenticatedDashboardRouteImport.update({
   path: '/dashboard',
   getParentRoute: () => AuthenticatedRouteRoute,
 } as any)
+const AuthenticatedImpostazioniRoute =
+  AuthenticatedImpostazioniRouteImport.update({
+    id: '/impostazioni',
+    path: '/impostazioni',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedPortaleSponsorRoute =
+  AuthenticatedPortaleSponsorRouteImport.update({
+    id: '/portale-sponsor',
+    path: '/portale-sponsor',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
 const AuthenticatedScadenzarioRoute =
   AuthenticatedScadenzarioRouteImport.update({
     id: '/scadenzario',
     path: '/scadenzario',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedInfoDocumentiRoute =
+  AuthenticatedInfoDocumentiRouteImport.update({
+    id: '/info/documenti',
+    path: '/info/documenti',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedInfoSafeguardingRoute =
+  AuthenticatedInfoSafeguardingRouteImport.update({
+    id: '/info/safeguarding',
+    path: '/info/safeguarding',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedMatchdayIndexRoute =
+  AuthenticatedMatchdayIndexRouteImport.update({
+    id: '/matchday/',
+    path: '/matchday/',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedMatchdayAbbonamentiRoute =
+  AuthenticatedMatchdayAbbonamentiRouteImport.update({
+    id: '/matchday/abbonamenti',
+    path: '/matchday/abbonamenti',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedMatchdayAccessiRoute =
+  AuthenticatedMatchdayAccessiRouteImport.update({
+    id: '/matchday/accessi',
+    path: '/matchday/accessi',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedMatchdayAccreditiRoute =
+  AuthenticatedMatchdayAccreditiRouteImport.update({
+    id: '/matchday/accrediti',
+    path: '/matchday/accrediti',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedMatchdayCassaRoute =
+  AuthenticatedMatchdayCassaRouteImport.update({
+    id: '/matchday/cassa',
+    path: '/matchday/cassa',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedMatchdayReportRoute =
+  AuthenticatedMatchdayReportRouteImport.update({
+    id: '/matchday/report',
+    path: '/matchday/report',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedModuloSlugRoute = AuthenticatedModuloSlugRouteImport.update({
+  id: '/modulo/$slug',
+  path: '/modulo/$slug',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedSponsorIndexRoute =
+  AuthenticatedSponsorIndexRouteImport.update({
+    id: '/sponsor/',
+    path: '/sponsor/',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedSponsorContrattiRoute =
+  AuthenticatedSponsorContrattiRouteImport.update({
+    id: '/sponsor/contratti',
+    path: '/sponsor/contratti',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedSponsorControprestazioniRoute =
+  AuthenticatedSponsorControprestazioniRouteImport.update({
+    id: '/sponsor/controprestazioni',
+    path: '/sponsor/controprestazioni',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedSponsorCrmRoute = AuthenticatedSponsorCrmRouteImport.update({
+  id: '/sponsor/crm',
+  path: '/sponsor/crm',
+  getParentRoute: () => AuthenticatedRouteRoute,
+} as any)
+const AuthenticatedSponsorReportRoute =
+  AuthenticatedSponsorReportRouteImport.update({
+    id: '/sponsor/report',
+    path: '/sponsor/report',
+    getParentRoute: () => AuthenticatedRouteRoute,
+  } as any)
+const AuthenticatedSponsorSpaziRoute =
+  AuthenticatedSponsorSpaziRouteImport.update({
+    id: '/sponsor/spazi',
+    path: '/sponsor/spazi',
     getParentRoute: () => AuthenticatedRouteRoute,
   } as any)
 const ApiPublicIcalTokenRoute = ApiPublicIcalTokenRouteImport.update({
@@ -58,7 +175,24 @@ export interface FileRoutesByFullPath {
   '/auth': typeof AuthRoute
   '/reset-password': typeof ResetPasswordRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
+  '/impostazioni': typeof AuthenticatedImpostazioniRoute
+  '/portale-sponsor': typeof AuthenticatedPortaleSponsorRoute
   '/scadenzario': typeof AuthenticatedScadenzarioRoute
+  '/info/documenti': typeof AuthenticatedInfoDocumentiRoute
+  '/info/safeguarding': typeof AuthenticatedInfoSafeguardingRoute
+  '/matchday/abbonamenti': typeof AuthenticatedMatchdayAbbonamentiRoute
+  '/matchday/accessi': typeof AuthenticatedMatchdayAccessiRoute
+  '/matchday/accrediti': typeof AuthenticatedMatchdayAccreditiRoute
+  '/matchday/cassa': typeof AuthenticatedMatchdayCassaRoute
+  '/matchday/report': typeof AuthenticatedMatchdayReportRoute
+  '/modulo/$slug': typeof AuthenticatedModuloSlugRoute
+  '/sponsor/contratti': typeof AuthenticatedSponsorContrattiRoute
+  '/sponsor/controprestazioni': typeof AuthenticatedSponsorControprestazioniRoute
+  '/sponsor/crm': typeof AuthenticatedSponsorCrmRoute
+  '/sponsor/report': typeof AuthenticatedSponsorReportRoute
+  '/sponsor/spazi': typeof AuthenticatedSponsorSpaziRoute
+  '/matchday/': typeof AuthenticatedMatchdayIndexRoute
+  '/sponsor/': typeof AuthenticatedSponsorIndexRoute
   '/api/public/ical/$token': typeof ApiPublicIcalTokenRoute
 }
 export interface FileRoutesByTo {
@@ -66,7 +200,24 @@ export interface FileRoutesByTo {
   '/auth': typeof AuthRoute
   '/reset-password': typeof ResetPasswordRoute
   '/dashboard': typeof AuthenticatedDashboardRoute
+  '/impostazioni': typeof AuthenticatedImpostazioniRoute
+  '/portale-sponsor': typeof AuthenticatedPortaleSponsorRoute
   '/scadenzario': typeof AuthenticatedScadenzarioRoute
+  '/info/documenti': typeof AuthenticatedInfoDocumentiRoute
+  '/info/safeguarding': typeof AuthenticatedInfoSafeguardingRoute
+  '/matchday/abbonamenti': typeof AuthenticatedMatchdayAbbonamentiRoute
+  '/matchday/accessi': typeof AuthenticatedMatchdayAccessiRoute
+  '/matchday/accrediti': typeof AuthenticatedMatchdayAccreditiRoute
+  '/matchday/cassa': typeof AuthenticatedMatchdayCassaRoute
+  '/matchday/report': typeof AuthenticatedMatchdayReportRoute
+  '/modulo/$slug': typeof AuthenticatedModuloSlugRoute
+  '/sponsor/contratti': typeof AuthenticatedSponsorContrattiRoute
+  '/sponsor/controprestazioni': typeof AuthenticatedSponsorControprestazioniRoute
+  '/sponsor/crm': typeof AuthenticatedSponsorCrmRoute
+  '/sponsor/report': typeof AuthenticatedSponsorReportRoute
+  '/sponsor/spazi': typeof AuthenticatedSponsorSpaziRoute
+  '/matchday': typeof AuthenticatedMatchdayIndexRoute
+  '/sponsor': typeof AuthenticatedSponsorIndexRoute
   '/api/public/ical/$token': typeof ApiPublicIcalTokenRoute
 }
 export interface FileRoutesById {
@@ -76,7 +227,24 @@ export interface FileRoutesById {
   '/auth': typeof AuthRoute
   '/reset-password': typeof ResetPasswordRoute
   '/_authenticated/dashboard': typeof AuthenticatedDashboardRoute
+  '/_authenticated/impostazioni': typeof AuthenticatedImpostazioniRoute
+  '/_authenticated/portale-sponsor': typeof AuthenticatedPortaleSponsorRoute
   '/_authenticated/scadenzario': typeof AuthenticatedScadenzarioRoute
+  '/_authenticated/info/documenti': typeof AuthenticatedInfoDocumentiRoute
+  '/_authenticated/info/safeguarding': typeof AuthenticatedInfoSafeguardingRoute
+  '/_authenticated/matchday/abbonamenti': typeof AuthenticatedMatchdayAbbonamentiRoute
+  '/_authenticated/matchday/accessi': typeof AuthenticatedMatchdayAccessiRoute
+  '/_authenticated/matchday/accrediti': typeof AuthenticatedMatchdayAccreditiRoute
+  '/_authenticated/matchday/cassa': typeof AuthenticatedMatchdayCassaRoute
+  '/_authenticated/matchday/report': typeof AuthenticatedMatchdayReportRoute
+  '/_authenticated/modulo/$slug': typeof AuthenticatedModuloSlugRoute
+  '/_authenticated/sponsor/contratti': typeof AuthenticatedSponsorContrattiRoute
+  '/_authenticated/sponsor/controprestazioni': typeof AuthenticatedSponsorControprestazioniRoute
+  '/_authenticated/sponsor/crm': typeof AuthenticatedSponsorCrmRoute
+  '/_authenticated/sponsor/report': typeof AuthenticatedSponsorReportRoute
+  '/_authenticated/sponsor/spazi': typeof AuthenticatedSponsorSpaziRoute
+  '/_authenticated/matchday/': typeof AuthenticatedMatchdayIndexRoute
+  '/_authenticated/sponsor/': typeof AuthenticatedSponsorIndexRoute
   '/api/public/ical/$token': typeof ApiPublicIcalTokenRoute
 }
 export interface FileRouteTypes {
@@ -86,7 +254,24 @@ export interface FileRouteTypes {
     | '/auth'
     | '/reset-password'
     | '/dashboard'
+    | '/impostazioni'
+    | '/portale-sponsor'
     | '/scadenzario'
+    | '/info/documenti'
+    | '/info/safeguarding'
+    | '/matchday/abbonamenti'
+    | '/matchday/accessi'
+    | '/matchday/accrediti'
+    | '/matchday/cassa'
+    | '/matchday/report'
+    | '/modulo/$slug'
+    | '/sponsor/contratti'
+    | '/sponsor/controprestazioni'
+    | '/sponsor/crm'
+    | '/sponsor/report'
+    | '/sponsor/spazi'
+    | '/matchday/'
+    | '/sponsor/'
     | '/api/public/ical/$token'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -94,7 +279,24 @@ export interface FileRouteTypes {
     | '/auth'
     | '/reset-password'
     | '/dashboard'
+    | '/impostazioni'
+    | '/portale-sponsor'
     | '/scadenzario'
+    | '/info/documenti'
+    | '/info/safeguarding'
+    | '/matchday/abbonamenti'
+    | '/matchday/accessi'
+    | '/matchday/accrediti'
+    | '/matchday/cassa'
+    | '/matchday/report'
+    | '/modulo/$slug'
+    | '/sponsor/contratti'
+    | '/sponsor/controprestazioni'
+    | '/sponsor/crm'
+    | '/sponsor/report'
+    | '/sponsor/spazi'
+    | '/matchday'
+    | '/sponsor'
     | '/api/public/ical/$token'
   id:
     | '__root__'
@@ -103,7 +305,24 @@ export interface FileRouteTypes {
     | '/auth'
     | '/reset-password'
     | '/_authenticated/dashboard'
+    | '/_authenticated/impostazioni'
+    | '/_authenticated/portale-sponsor'
     | '/_authenticated/scadenzario'
+    | '/_authenticated/info/documenti'
+    | '/_authenticated/info/safeguarding'
+    | '/_authenticated/matchday/abbonamenti'
+    | '/_authenticated/matchday/accessi'
+    | '/_authenticated/matchday/accrediti'
+    | '/_authenticated/matchday/cassa'
+    | '/_authenticated/matchday/report'
+    | '/_authenticated/modulo/$slug'
+    | '/_authenticated/sponsor/contratti'
+    | '/_authenticated/sponsor/controprestazioni'
+    | '/_authenticated/sponsor/crm'
+    | '/_authenticated/sponsor/report'
+    | '/_authenticated/sponsor/spazi'
+    | '/_authenticated/matchday/'
+    | '/_authenticated/sponsor/'
     | '/api/public/ical/$token'
   fileRoutesById: FileRoutesById
 }
@@ -152,11 +371,130 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof AuthenticatedDashboardRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
+    '/_authenticated/impostazioni': {
+      id: '/_authenticated/impostazioni'
+      path: '/impostazioni'
+      fullPath: '/impostazioni'
+      preLoaderRoute: typeof AuthenticatedImpostazioniRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/portale-sponsor': {
+      id: '/_authenticated/portale-sponsor'
+      path: '/portale-sponsor'
+      fullPath: '/portale-sponsor'
+      preLoaderRoute: typeof AuthenticatedPortaleSponsorRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
     '/_authenticated/scadenzario': {
       id: '/_authenticated/scadenzario'
       path: '/scadenzario'
       fullPath: '/scadenzario'
       preLoaderRoute: typeof AuthenticatedScadenzarioRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/info/documenti': {
+      id: '/_authenticated/info/documenti'
+      path: '/info/documenti'
+      fullPath: '/info/documenti'
+      preLoaderRoute: typeof AuthenticatedInfoDocumentiRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/info/safeguarding': {
+      id: '/_authenticated/info/safeguarding'
+      path: '/info/safeguarding'
+      fullPath: '/info/safeguarding'
+      preLoaderRoute: typeof AuthenticatedInfoSafeguardingRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/matchday/': {
+      id: '/_authenticated/matchday/'
+      path: '/matchday'
+      fullPath: '/matchday/'
+      preLoaderRoute: typeof AuthenticatedMatchdayIndexRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/matchday/abbonamenti': {
+      id: '/_authenticated/matchday/abbonamenti'
+      path: '/matchday/abbonamenti'
+      fullPath: '/matchday/abbonamenti'
+      preLoaderRoute: typeof AuthenticatedMatchdayAbbonamentiRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/matchday/accessi': {
+      id: '/_authenticated/matchday/accessi'
+      path: '/matchday/accessi'
+      fullPath: '/matchday/accessi'
+      preLoaderRoute: typeof AuthenticatedMatchdayAccessiRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/matchday/accrediti': {
+      id: '/_authenticated/matchday/accrediti'
+      path: '/matchday/accrediti'
+      fullPath: '/matchday/accrediti'
+      preLoaderRoute: typeof AuthenticatedMatchdayAccreditiRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/matchday/cassa': {
+      id: '/_authenticated/matchday/cassa'
+      path: '/matchday/cassa'
+      fullPath: '/matchday/cassa'
+      preLoaderRoute: typeof AuthenticatedMatchdayCassaRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/matchday/report': {
+      id: '/_authenticated/matchday/report'
+      path: '/matchday/report'
+      fullPath: '/matchday/report'
+      preLoaderRoute: typeof AuthenticatedMatchdayReportRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/modulo/$slug': {
+      id: '/_authenticated/modulo/$slug'
+      path: '/modulo/$slug'
+      fullPath: '/modulo/$slug'
+      preLoaderRoute: typeof AuthenticatedModuloSlugRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/sponsor/': {
+      id: '/_authenticated/sponsor/'
+      path: '/sponsor'
+      fullPath: '/sponsor/'
+      preLoaderRoute: typeof AuthenticatedSponsorIndexRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/sponsor/contratti': {
+      id: '/_authenticated/sponsor/contratti'
+      path: '/sponsor/contratti'
+      fullPath: '/sponsor/contratti'
+      preLoaderRoute: typeof AuthenticatedSponsorContrattiRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/sponsor/controprestazioni': {
+      id: '/_authenticated/sponsor/controprestazioni'
+      path: '/sponsor/controprestazioni'
+      fullPath: '/sponsor/controprestazioni'
+      preLoaderRoute: typeof AuthenticatedSponsorControprestazioniRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/sponsor/crm': {
+      id: '/_authenticated/sponsor/crm'
+      path: '/sponsor/crm'
+      fullPath: '/sponsor/crm'
+      preLoaderRoute: typeof AuthenticatedSponsorCrmRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/sponsor/report': {
+      id: '/_authenticated/sponsor/report'
+      path: '/sponsor/report'
+      fullPath: '/sponsor/report'
+      preLoaderRoute: typeof AuthenticatedSponsorReportRouteImport
+      parentRoute: typeof AuthenticatedRouteRoute
+    }
+    '/_authenticated/sponsor/spazi': {
+      id: '/_authenticated/sponsor/spazi'
+      path: '/sponsor/spazi'
+      fullPath: '/sponsor/spazi'
+      preLoaderRoute: typeof AuthenticatedSponsorSpaziRouteImport
       parentRoute: typeof AuthenticatedRouteRoute
     }
     '/api/public/ical/$token': {
@@ -171,12 +509,47 @@ declare module '@tanstack/react-router' {
 
 interface AuthenticatedRouteRouteChildren {
   AuthenticatedDashboardRoute: typeof AuthenticatedDashboardRoute
+  AuthenticatedImpostazioniRoute: typeof AuthenticatedImpostazioniRoute
+  AuthenticatedPortaleSponsorRoute: typeof AuthenticatedPortaleSponsorRoute
   AuthenticatedScadenzarioRoute: typeof AuthenticatedScadenzarioRoute
+  AuthenticatedInfoDocumentiRoute: typeof AuthenticatedInfoDocumentiRoute
+  AuthenticatedInfoSafeguardingRoute: typeof AuthenticatedInfoSafeguardingRoute
+  AuthenticatedMatchdayAbbonamentiRoute: typeof AuthenticatedMatchdayAbbonamentiRoute
+  AuthenticatedMatchdayAccessiRoute: typeof AuthenticatedMatchdayAccessiRoute
+  AuthenticatedMatchdayAccreditiRoute: typeof AuthenticatedMatchdayAccreditiRoute
+  AuthenticatedMatchdayCassaRoute: typeof AuthenticatedMatchdayCassaRoute
+  AuthenticatedMatchdayReportRoute: typeof AuthenticatedMatchdayReportRoute
+  AuthenticatedModuloSlugRoute: typeof AuthenticatedModuloSlugRoute
+  AuthenticatedSponsorContrattiRoute: typeof AuthenticatedSponsorContrattiRoute
+  AuthenticatedSponsorControprestazioniRoute: typeof AuthenticatedSponsorControprestazioniRoute
+  AuthenticatedSponsorCrmRoute: typeof AuthenticatedSponsorCrmRoute
+  AuthenticatedSponsorReportRoute: typeof AuthenticatedSponsorReportRoute
+  AuthenticatedSponsorSpaziRoute: typeof AuthenticatedSponsorSpaziRoute
+  AuthenticatedMatchdayIndexRoute: typeof AuthenticatedMatchdayIndexRoute
+  AuthenticatedSponsorIndexRoute: typeof AuthenticatedSponsorIndexRoute
 }
 
 const AuthenticatedRouteRouteChildren: AuthenticatedRouteRouteChildren = {
   AuthenticatedDashboardRoute: AuthenticatedDashboardRoute,
+  AuthenticatedImpostazioniRoute: AuthenticatedImpostazioniRoute,
+  AuthenticatedPortaleSponsorRoute: AuthenticatedPortaleSponsorRoute,
   AuthenticatedScadenzarioRoute: AuthenticatedScadenzarioRoute,
+  AuthenticatedInfoDocumentiRoute: AuthenticatedInfoDocumentiRoute,
+  AuthenticatedInfoSafeguardingRoute: AuthenticatedInfoSafeguardingRoute,
+  AuthenticatedMatchdayAbbonamentiRoute: AuthenticatedMatchdayAbbonamentiRoute,
+  AuthenticatedMatchdayAccessiRoute: AuthenticatedMatchdayAccessiRoute,
+  AuthenticatedMatchdayAccreditiRoute: AuthenticatedMatchdayAccreditiRoute,
+  AuthenticatedMatchdayCassaRoute: AuthenticatedMatchdayCassaRoute,
+  AuthenticatedMatchdayReportRoute: AuthenticatedMatchdayReportRoute,
+  AuthenticatedModuloSlugRoute: AuthenticatedModuloSlugRoute,
+  AuthenticatedSponsorContrattiRoute: AuthenticatedSponsorContrattiRoute,
+  AuthenticatedSponsorControprestazioniRoute:
+    AuthenticatedSponsorControprestazioniRoute,
+  AuthenticatedSponsorCrmRoute: AuthenticatedSponsorCrmRoute,
+  AuthenticatedSponsorReportRoute: AuthenticatedSponsorReportRoute,
+  AuthenticatedSponsorSpaziRoute: AuthenticatedSponsorSpaziRoute,
+  AuthenticatedMatchdayIndexRoute: AuthenticatedMatchdayIndexRoute,
+  AuthenticatedSponsorIndexRoute: AuthenticatedSponsorIndexRoute,
 }
 
 const AuthenticatedRouteRouteWithChildren =

@@ -84,11 +84,19 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
       { title: "GEMA360 – La T Tecnica Gema Montecatini" },
-      { name: "description", content: "Gestionale della Pallacanestro Montecatini: scadenzario, sponsor, botteghino e match day al PalaTerme." },
+      {
+        name: "description",
+        content:
+          "Gestionale della Pallacanestro Montecatini: scadenzario, sponsor, botteghino e match day al PalaTerme.",
+      },
       { name: "author", content: "Pallacanestro Montecatini" },
       { name: "theme-color", content: "#0B2A5B" },
       { property: "og:title", content: "GEMA360 – La T Tecnica Gema Montecatini" },
-      { property: "og:description", content: "Gestionale della Pallacanestro Montecatini: scadenzario, sponsor, botteghino e match day." },
+      {
+        property: "og:description",
+        content:
+          "Gestionale della Pallacanestro Montecatini: scadenzario, sponsor, botteghino e match day.",
+      },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
       { name: "twitter:site", content: "@Lovable" },
@@ -102,7 +110,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "manifest", href: "/manifest.webmanifest" },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap" },
+      {
+        rel: "stylesheet",
+        href: "https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Barlow+Condensed:wght@600;700;800&display=swap",
+      },
     ],
   }),
   shellComponent: RootShell,

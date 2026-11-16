@@ -6,7 +6,14 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 
 export const Route = createFileRoute("/reset-password")({
-  head: () => ({ meta: [{ title: "Nuova password – GEMA360" }, { name: "description", content: "Imposta una nuova password." }, { property: "og:title", content: "Nuova password – GEMA360" }, { property: "og:description", content: "Imposta una nuova password." }] }),
+  head: () => ({
+    meta: [
+      { title: "Nuova password – GEMA360" },
+      { name: "description", content: "Imposta una nuova password." },
+      { property: "og:title", content: "Nuova password – GEMA360" },
+      { property: "og:description", content: "Imposta una nuova password." },
+    ],
+  }),
   component: Reset,
 });
 
@@ -24,8 +31,15 @@ function Reset() {
     <div className="flex min-h-screen items-center justify-center p-6">
       <div className="w-full max-w-sm space-y-3">
         <h1 className="font-display text-3xl font-bold uppercase text-primary">Nuova password</h1>
-        <Input type="password" value={pw} onChange={(e) => setPw(e.target.value)} placeholder="Nuova password" />
-        <Button className="w-full" onClick={save}>Salva</Button>
+        <Input
+          type="password"
+          value={pw}
+          onChange={(e) => setPw(e.target.value)}
+          placeholder="Nuova password"
+        />
+        <Button className="w-full" onClick={save}>
+          Salva
+        </Button>
       </div>
     </div>
   );
