@@ -1,0 +1,10 @@
+{
+  "name": "GEMA360 – La T Tecnica Gema Montecatini",
+  "short_name": "GEMA360",
+  "lang": "it",
+  "start_url": "/dashboard",
+  "display": "standalone",
+  "background_color": "#0B2A5B",
+  "theme_color": "#0B2A5B",
+  "icons": [{ "src": "/favicon.ico", "sizes": "64x64", "type": "image/x-icon" }]
+}
